@@ -1,3 +1,3 @@
 import App from './App';
-
-export {App};
+import PostsList from './PostsList';
+export { App, PostsList };
