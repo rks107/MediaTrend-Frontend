@@ -1,14 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Navbar(props) {
     return (
       <div>
         <nav className="nav">
           <div className="left-div">
-            <img
-              src="https://scontent-del1-1.xx.fbcdn.net/v/t1.0-9/130279285_112327020722464_7241484572999383910_n.jpg?_nc_cat=109&ccb=2&_nc_sid=730e14&_nc_ohc=s1DiakUs5CUAX8v8MOK&_nc_ht=scontent-del1-1.xx&oh=1e44b9385c253bcd1c907c392738bd24&oe=5FF6266E"
-              alt="logo"
-            />
+            <Link to="/">
+              <img
+                src="https://scontent-del1-1.xx.fbcdn.net/v/t1.0-9/130279285_112327020722464_7241484572999383910_n.jpg?_nc_cat=109&ccb=2&_nc_sid=730e14&_nc_ohc=s1DiakUs5CUAX8v8MOK&_nc_ht=scontent-del1-1.xx&oh=1e44b9385c253bcd1c907c392738bd24&oe=5FF6266E"
+                alt="logo"
+              />
+            </Link>
           </div>
           <div className="search-container">
             <img
@@ -48,9 +51,15 @@ function Navbar(props) {
             </div>
             <div className="nav-links">
               <ul>
-                <li>Log in</li>
-                <li>Log out</li>
-                <li>Register</li>
+                <li>
+                  <Link to="/login">Log in</Link>
+                </li>
+                <li>
+                  <Link to="/logout">Log out</Link>
+                </li>
+                <li>
+                  <Link to="/signup">Register</Link>
+                </li>
               </ul>
             </div>
           </div>

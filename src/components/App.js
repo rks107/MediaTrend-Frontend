@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import {fetchPosts} from '../actions/posts'
-import { PostsList, Navbar } from './';
+import { Navbar, Home, Page404 } from './';
 
 
 class App extends Component {
@@ -21,7 +21,18 @@ class App extends Component {
       <Router>
         <div>
           <Navbar />
-          <PostsList posts={posts} />
+          <Switch>
+            
+            <Route
+              exact
+              path="/"
+              render={(props) => {
+                return <Home {...props} posts={posts} />;
+              }}
+            />
+            <Route component={Page404} />
+
+          </Switch>
         </div>
       </Router>
     );
