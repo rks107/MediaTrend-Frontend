@@ -29,8 +29,8 @@ class App extends Component {
                 return <Home {...props} posts={posts} />;
               }}
             />
-            <Route to="/login" component={Login} />
-            <Route to="/logout" component={Logout} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/logout" component={Logout} />
 
             <Route component={Page404} />
           </Switch>
