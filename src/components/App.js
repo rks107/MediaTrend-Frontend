@@ -5,12 +5,20 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import {fetchPosts} from '../actions/posts'
 import { Navbar, Home, Page404, Login, Signup } from './';
-
+// import * as jwtDecode from "jwt-decode";
+import jwt_decode from 'jwt-decode';
 
 class App extends Component {
 
   componentDidMount() {
     this.props.dispatch(fetchPosts());
+
+    const token = localStorage.getItem('token');
+
+    if(token){
+      const user = jwt_decode(token);
+      console.log('USER', user);
+    }
   }
   
 
