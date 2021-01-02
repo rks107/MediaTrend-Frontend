@@ -195,10 +195,17 @@ code {
 /* NAVBAR */
 .nav {
   display: flex;
-  background: #6200ee;
+  /* background: #6200ee; */
+  background-color: #266DD3;
   padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
+}
+.webpath{
+  font-size: 25px;
+  font-weight: 600;
+  color: #FFFFFC;
+  text-decoration: none;
 }
 .logo {
   color: #fff;
@@ -407,6 +414,9 @@ nav .nav-links ul li:hover {
 }
 .field button:hover {
   cursor: pointer;
+}
+.field button:disabled {
+  cursor: not-allowed;
 }
 
 /* SETTINGS and USERPROFILE */

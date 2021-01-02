@@ -4,6 +4,6 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Page404 from './Page404';
 import Login from './Login';
-import Logout from './Logout';
+import Signup from './Signup';
 
-export { App, PostsList, Navbar, Home, Page404, Login, Logout };
+export { App, PostsList, Navbar, Home, Page404, Login, Signup };
