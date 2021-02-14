@@ -45,10 +45,11 @@ export function login(email, password) {
     })
       .then((response) => response.json())
       .then((data) => {
-        // console.log('data', data.data);
+        console.log('data', data.data);
         if (data.data) {
           // dispatch action to save user
           localStorage.setItem('token', data.data.token);
+          console.log("loginSuccess", data.data.user);
           dispatch(loginSuccess(data.data.user));
           return;
         }

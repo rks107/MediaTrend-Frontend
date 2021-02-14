@@ -12,6 +12,7 @@ class Navbar extends React.Component {
 
   render() {
     const { auth } = this.props;
+    console.log("AUTH", auth);
     return (
       <nav className="nav">
         <div className="left-div">
